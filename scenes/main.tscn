@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://coh1uiwnobmfs" path="res://scenes/rat.tscn" id="1_o5qli"]
 [ext_resource type="Script" uid="uid://jgx17b7dgbi" path="res://scripts/main.gd" id="1_sugp2"]
-[ext_resource type="PackedScene" path="res://scenes/mob.tscn" id="2_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://bg32w5855hi3s" path="res://scenes/mob.tscn" id="2_jyhfs"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_sgp6g"]
 size = Vector3(60, 2, 60)
@@ -83,4 +83,5 @@ transform = Transform3D(-0.008756331, 0, -0.9999617, 0, 1, 0, 0.9999617, 0, -0.0
 wait_time = 0.5
 autostart = true
 
+[connection signal="hit" from="Player" to="." method="_on_player_hit"]
 [connection signal="timeout" from="MobTimer" to="." method="_on_mob_timer_timeout"]

@@ -1,3 +1,2 @@
-res://scenes/rat.tscn
-res://scripts/rat.gd
+res://scripts/main.gd
 res://scenes/main.tscn

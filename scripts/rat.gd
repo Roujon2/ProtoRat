@@ -86,3 +86,16 @@ func die():
 
 func _on_mob_detector_body_entered(body):
 	die()
+
+
+func _on_score_label_grow() -> void:
+
+	var tween = create_tween()
+	
+
+	tween.tween_property(
+		self, 
+		"scale", 
+		scale * 1.3, 
+		0.4 
+	).set_trans(Tween.TRANS_ELASTIC).set_ease(Tween.EASE_OUT)

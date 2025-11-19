@@ -152,3 +152,4 @@ text = "Press Enter to retry"
 
 [connection signal="hit" from="Player" to="." method="_on_player_hit"]
 [connection signal="timeout" from="MobTimer" to="." method="_on_mob_timer_timeout"]
+[connection signal="grow" from="UserInterface/ScoreLabel" to="Player" method="_on_score_label_grow"]

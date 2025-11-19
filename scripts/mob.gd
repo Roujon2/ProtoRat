@@ -4,7 +4,6 @@ extends CharacterBody3D
 @export var min_speed = 10
 # Maximum speed of the mob in meters per second.
 @export var max_speed = 18
-
 # Emitted when the player jumped on the mob.
 signal squashed
 
@@ -32,8 +31,14 @@ func initialize(start_position, player_position):
 
 
 func squash():
+	$AnimationPlayer.play("death")
+
 	squashed.emit()
-	queue_free()
 
 func _on_visible_on_screen_notifier_3d_screen_exited() -> void:
 	queue_free()
+
+
+func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+	if (anim_name == 'death'):
+		queue_free()

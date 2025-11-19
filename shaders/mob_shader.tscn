@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bip5ol17weqr0"]
+
+[ext_resource type="PackedScene" uid="uid://bicorb7we351t" path="res://art/mob.glb" id="1_hlb0m"]
+[ext_resource type="Material" uid="uid://bb2wgf6f2tnh3" path="res://shaders/beans_outline_mob.tres" id="2_mqy8o"]
+
+[node name="mob" instance=ExtResource("1_hlb0m")]
+
+[node name="Sphere" parent="." index="0"]
+surface_material_override/1 = ExtResource("2_mqy8o")

@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://bb2wgf6f2tnh3"]
+
+[ext_resource type="Shader" uid="uid://bygjky0dhbkk0" path="res://shaders/beans_outline.gdshader" id="1_fwcx6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hfuhr"]
+albedo_color = Color(0.23796722, 0.03962624, 0.6797945, 1)
+
+[resource]
+render_priority = 1
+next_pass = SubResource("StandardMaterial3D_hfuhr")
+shader = ExtResource("1_fwcx6")
+shader_parameter/outline_color = Color(0, 0, 0, 1)
+shader_parameter/outline_width = 5.0

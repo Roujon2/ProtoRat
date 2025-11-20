@@ -32,3 +32,10 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_accept") and $UserInterface/Retry.visible:
 		# Restarts the current scene
 		get_tree().reload_current_scene()
+
+
+func _on_score_label_zoom_out() -> void:
+	$CameraPivot.zoom_out()
+	$SpawnPath.expand_spawn_path()
+	
+	
